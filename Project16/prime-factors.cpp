@@ -6,8 +6,12 @@ class PrimeFactors {
 public:
 	vector<int> of(int n) {
 		vector<int> factors;
-		if (n > 1)
-			factors.push_back(n);
+		for (int divisor = 2; n > 1; divisor++) {
+			while (n % divisor == 0) {
+				factors.push_back(divisor);
+				n /= divisor;
+			}
+		}
 		return factors;
 	}
 
