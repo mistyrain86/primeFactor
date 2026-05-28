@@ -1,26 +1,25 @@
 #include "gmock/gmock.h"
 #include "prime-factors.cpp"
 
-TEST(PrimeFactors, Of1) {
+using namespace testing;
+
+class PrimeFactorsTest : public Test {
+protected:
 	PrimeFactors prime_factor;
-	vector<int> expected = {};
-	EXPECT_EQ(expected, prime_factor.of(1));
+};
+
+TEST_F(PrimeFactorsTest, Of1) {
+	EXPECT_THAT(prime_factor.of(1), IsEmpty());
 }
 
-TEST(PrimeFactors, Of2) {
-	PrimeFactors prime_factor;
-	vector<int> expected = {2};
-	EXPECT_EQ(expected, prime_factor.of(2));
+TEST_F(PrimeFactorsTest, Of2) {
+	EXPECT_THAT(prime_factor.of(2), ElementsAre(2));
 }
 
-TEST(PrimeFactors, Of3) {
-	PrimeFactors prime_factor;
-	vector<int> expected = {3};
-	EXPECT_EQ(expected, prime_factor.of(3));
+TEST_F(PrimeFactorsTest, Of3) {
+	EXPECT_THAT(prime_factor.of(3), ElementsAre(3));
 }
 
-TEST(PrimeFactors, Of4) {
-	PrimeFactors prime_factor;
-	vector<int> expected = {2, 2};
-	EXPECT_EQ(expected, prime_factor.of(4));
+TEST_F(PrimeFactorsTest, Of4) {
+	EXPECT_THAT(prime_factor.of(4), ElementsAre(2, 2));
 }
