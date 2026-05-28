@@ -23,3 +23,11 @@ TEST_F(PrimeFactorsTest, Of3) {
 TEST_F(PrimeFactorsTest, Of4) {
 	EXPECT_THAT(prime_factor.of(4), ElementsAre(2, 2));
 }
+
+TEST_F(PrimeFactorsTest, Of8) {
+	EXPECT_THAT(prime_factor.of(8), ElementsAre(2, 2, 2));
+}
+
+TEST_F(PrimeFactorsTest, Of9) {
+	EXPECT_THAT(prime_factor.of(9), ElementsAre(3, 3));
+}
