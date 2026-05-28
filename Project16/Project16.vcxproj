@@ -133,6 +133,9 @@
     <ClCompile Include="prime-factors_test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="prime-factors.h" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

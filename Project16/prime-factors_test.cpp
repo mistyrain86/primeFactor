@@ -1,5 +1,5 @@
 #include "gmock/gmock.h"
-#include "prime-factors.cpp"
+#include "prime-factors.h"
 
 using namespace testing;
 
