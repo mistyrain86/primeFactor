@@ -9,14 +9,11 @@ public:
 		if (number > 1) {
 			if (number == 4)
 			{
-				if (number % 2 == 0) {
+				while (number % 2 == 0)
+				{
 					result.push_back(2);
 					number /= 2;
-				}
-				if (number % 2 == 0) {
-					result.push_back(2);
-					number /= 2;
-				}				
+				}			
 			}
 			else {
 				result.push_back(number);
