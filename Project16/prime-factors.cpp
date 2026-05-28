@@ -22,10 +22,11 @@ public:
 					result.push_back(2);
 					number /= divisor;
 				}
-				while (number % 3 == 0)
+				divisor++;
+				while (number % divisor == 0)
 				{
-					result.push_back(3);
-					number /= 3;
+					result.push_back(divisor);
+					number /= divisor;
 				}
 			}
 			else {
