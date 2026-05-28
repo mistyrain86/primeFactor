@@ -12,3 +12,9 @@ TEST(PrimeFactors, Of2) {
 	vector<int> expected = {2};
 	EXPECT_EQ(expected, prime_factor.of(2));
 }
+
+TEST(PrimeFactors, Of3) {
+	PrimeFactors prime_factor;
+	vector<int> expected = {3};
+	EXPECT_EQ(expected, prime_factor.of(3));
+}
